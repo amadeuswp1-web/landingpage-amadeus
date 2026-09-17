@@ -1,0 +1,586 @@
+<!-- Google Fonts : Playfair Display (Serif élégant) & Plus Jakarta Sans (Moderne & lisible) -->
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#FBF9F5',
+                    sand: '#F2ECE1',
+                    stoneCustom: '#E8E1D5',
+                    charcoal: '#1A1918',
+                    warmGray: '#736F6A',
+                    terracotta: '#9E6B56',
+                    terracottaHover: '#8A5A45',
+                },
+                fontFamily: {
+                    serif: ['Playfair Display', 'serif'],
+                    sans: ['Plus Jakarta Sans', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+
+<!-- Lucide Icons -->
+<script src="[https://unpkg.com/lucide@latest](https://unpkg.com/lucide@latest)"></script>
+
+<style>
+    /* Custom smooth transitions & micro-interactions */
+    ::selection {
+        background-color: #9E6B56;
+        color: #FBF9F5;
+    }
+    .fade-in {
+        animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+<!-- NAVIGATION DISCRÈTE -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-md border-b border-stoneCustom/40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#" class="font-serif text-lg tracking-wide text-charcoal font-medium hover:text-terracotta transition-colors">
+            Amadeus Avleka
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-sm text-warmGray">
+            <a href="#probleme" class="hover:text-charcoal transition-colors">Le Constat</a>
+            <a href="#services" class="hover:text-charcoal transition-colors">Mes Services</a>
+            <a href="#realisations" class="hover:text-charcoal transition-colors">Réalisations</a>
+            <a href="#methode" class="hover:text-charcoal transition-colors">Ma Façon de Travailler</a>
+            <a href="#tarifs" class="hover:text-charcoal transition-colors">Tarifs</a>
+        </div>
+        <div>
+            <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet)..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-charcoal text-cream text-xs uppercase tracking-widest font-medium hover:bg-terracotta transition-all duration-300 shadow-sm">
+                Discuter sur WhatsApp
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- SECTION 01 — HERO -->
+    <section class="min-h-screen pt-32 pb-20 md:pt-40 md:pb-32 flex items-center px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto w-full text-center fade-in">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-sand/60 border border-stoneCustom/60 text-xs uppercase tracking-widest text-warmGray mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse"></span>
+                <span>Sur-mesure • Humain • Exigeant</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-normal leading-[1.15] text-charcoal mb-8 max-w-4xl mx-auto">
+                Vous sublimez la beauté de vos clientes. <span class="italic font-light text-terracotta">Je structure l'espace digital</span> qui met enfin votre savoir-faire en valeur.
+            </h1>
+            
+            <p class="text-base md:text-lg text-warmGray max-w-2xl mx-auto font-light leading-relaxed mb-12">
+                Conception de sites web et d'identités visuelles pensés pour les professionnelles de la beauté et du bien-être.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet)..." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-terracotta text-cream text-sm tracking-wide font-medium hover:bg-terracottaHover transition-all duration-300 shadow-sm">
+                    Parler de mon projet sur WhatsApp
+                </a>
+                <a href="#realisations" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-sand/80 text-charcoal text-sm tracking-wide font-medium hover:bg-stoneCustom transition-all duration-300 border border-stoneCustom/40">
+                    Découvrir les réalisations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02 — LE PROBLÈME -->
+    <section id="probleme" class="py-24 md:py-32 px-6 bg-sand/30 border-t border-b border-stoneCustom/30">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">01 / Le Constat</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal leading-tight text-charcoal mb-10">
+                Instagram attire l'œil. Mais votre activité mérite mieux qu'un fil d'actualité qui s'efface.
+            </h2>
+            
+            <div class="space-y-6 text-warmGray text-base md:text-lg font-light leading-relaxed">
+                <p>
+                    Depuis deux ans, j'observe la même réalité chez tant de professionnelles talentueuses : vous avez des offres d'une qualité remarquable, un univers unique... mais vos prospects se perdent.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+                    <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                        <span class="font-serif text-2xl text-terracotta mb-3 block">01</span>
+                        <h3 class="text-charcoal font-medium mb-2">Informations dispersées</h3>
+                        <p class="text-sm">Disparues entre deux stories éphémères ou introuvables en un coup d'œil.</p>
+                    </div>
+                    <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                        <span class="font-serif text-2xl text-terracotta mb-3 block">02</span>
+                        <h3 class="text-charcoal font-medium mb-2">Manque de structure</h3>
+                        <p class="text-sm">Vos prestations et vos univers méritent un espace clair, hiérarchisé et rassurant.</p>
+                    </div>
+                    <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                        <span class="font-serif text-2xl text-terracotta mb-3 block">03</span>
+                        <h3 class="text-charcoal font-medium mb-2">Valeur invisible</h3>
+                        <p class="text-sm">On ne voit que vous sur vos visuels, mais on ne comprend pas immédiatement ce que vous résolvez ni la valeur réelle de vos soins.</p>
+                    </div>
+                </div>
+
+                <p class="text-charcoal font-medium pt-4 border-t border-stoneCustom/40">
+                    Le problème n'est pas votre talent. C'est l'écrin dans lequel vous le présentez.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03 — LA TRANSFORMATION -->
+    <section class="py-24 md:py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">02 / La Métamorphose</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-6">
+                    Votre activité. Votre univers. Votre véritable espace en ligne.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Avant -->
+                <div class="bg-stoneCustom/20 p-8 md:p-10 rounded-3xl border border-stoneCustom/50">
+                    <span class="text-xs uppercase tracking-widest text-warmGray font-semibold block mb-6">Avant l'accompagnement</span>
+                    <ul class="space-y-4 text-warmGray font-light">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="x" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Des publications éparpillées sans fil conducteur visible.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="x" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Une image qui ne reflète pas la minutie de vos mains.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="x" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Des clientes qui doivent chercher longtemps pour trouver vos tarifs ou réserver.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Après -->
+                <div class="bg-charcoal text-cream p-8 md:p-10 rounded-3xl shadow-xl">
+                    <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-6">Après notre collaboration</span>
+                    <ul class="space-y-4 text-cream/90 font-light">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Une présence professionnelle qui inspire confiance dès la première seconde.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Une image cohérente, élégante et parfaitement alignée avec vos valeurs.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
+                            <span>Un parcours fluide qui transforme une simple curieuse en partenaire de confiance.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04 — MES SERVICES -->
+    <section id="services" class="py-24 md:py-32 px-6 bg-sand/30 border-t border-b border-stoneCustom/30">
+        <div class="max-w-5xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">03 / Mes Piliers</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-16">
+                Deux solutions pour révéler votre travail.
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-cream p-10 rounded-3xl border border-stoneCustom/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-serif text-4xl text-terracotta font-light">01</span>
+                            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-sand text-charcoal font-medium">À partir de 600 €</span>
+                        </div>
+                        <h3 class="font-serif text-2xl md:text-3xl font-normal text-charcoal mb-4">Site Web Sur-Mesure</h3>
+                        <p class="text-warmGray font-light mb-8 leading-relaxed">
+                            Un espace qui vous appartient vraiment. Conçu pour présenter vos prestations, rassurer vos nouvelles clientes, mettre en valeur vos réalisations et simplifier la prise de contact. Pensé avant tout pour le mobile, fluide, rapide et élégant.
+                        </p>
+                    </div>
+                    <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20je%20souhaite%20discuter%20de%20mon%20projet%20de%20site%20web](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20je%20souhaite%20discuter%20de%20mon%20projet%20de%20site%20web)..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm font-medium text-charcoal hover:text-terracotta transition-colors">
+                        <span>Échanger sur mon site web</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cream p-10 rounded-3xl border border-stoneCustom/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-serif text-4xl text-terracotta font-light">02</span>
+                            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-sand text-charcoal font-medium">À partir de 60 €</span>
+                        </div>
+                        <h3 class="font-serif text-2xl md:text-3xl font-normal text-charcoal mb-4">Design Graphique & Identité</h3>
+                        <p class="text-warmGray font-light mb-8 leading-relaxed">
+                            Flyers, cartes de visite, affiches, visuels réseaux sociaux et éléments graphiques. Fini le design générique : chaque support prolonge votre univers visuel avec finesse, cohérence et distinction.
+                        </p>
+                    </div>
+                    <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20je%20souhaite%20discuter%20de%20mes%20besoins%20en%20design%20graphique](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20je%20souhaite%20discuter%20de%20mes%20besoins%20en%20design%20graphique)..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm font-medium text-charcoal hover:text-terracotta transition-colors">
+                        <span>Échanger sur mes visuels</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05 — CE QUE LE PARTENAIRE OBTIENT -->
+    <section class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">04 / Les Bénéfices Concrets</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-12">
+                Bien plus qu'un simple site. Un outil taillé pour votre quotidien.
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-sand/30 border border-stoneCustom/40">
+                    <h3 class="text-charcoal font-medium mb-2 flex items-center space-x-2">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-terracotta"></i>
+                        <span>Une image crédible et alignée</span>
+                    </h3>
+                    <p class="text-sm text-warmGray font-light">qui justifie naturellement la valeur de vos tarifs et l'excellence de vos soins.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sand/30 border border-stoneCustom/40">
+                    <h3 class="text-charcoal font-medium mb-2 flex items-center space-x-2">
+                        <i data-lucide="eye" class="w-4 h-4 text-terracotta"></i>
+                        <span>Une clarté absolue</span>
+                    </h3>
+                    <p class="text-sm text-warmGray font-light">sur ce que vous proposez et ce que vos clientes vont profondément ressentir.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sand/30 border border-stoneCustom/40">
+                    <h3 class="text-charcoal font-medium mb-2 flex items-center space-x-2">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-terracotta"></i>
+                        <span>Une indépendance vis-à-vis d'Instagram</span>
+                    </h3>
+                    <p class="text-sm text-warmGray font-light">pour sécuriser votre présence et posséder enfin votre propre territoire en ligne.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sand/30 border border-stoneCustom/40">
+                    <h3 class="text-charcoal font-medium mb-2 flex items-center space-x-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-terracotta"></i>
+                        <span>Un parcours sans friction</span>
+                    </h3>
+                    <p class="text-sm text-warmGray font-light">qui amène directement et naturellement vers vos échanges WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06 — MES RÉALISATIONS -->
+    <section id="realisations" class="py-24 md:py-32 px-6 bg-sand/30 border-t border-b border-stoneCustom/30">
+        <div class="max-w-6xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">05 / Portfolio</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-6">
+                Mes réalisations récentes.
+            </h2>
+            <p class="text-warmGray font-light mb-16 max-w-2xl">
+                Découvrez 4 projets web et 4 projets graphiques conçus sur-mesure pour des professionnelles exigeantes de la beauté et du bien-être.
+            </p>
+
+            <!-- Onglets de projets (Web & Graphisme) -->
+            <div class="space-y-16">
+                <div>
+                    <h3 class="font-serif text-2xl font-normal text-charcoal mb-8 pb-4 border-b border-stoneCustom/40 flex items-center justify-between">
+                        <span>Sites Web Sur-Mesure</span>
+                        <span class="text-xs uppercase tracking-widest text-warmGray font-sans">4 Projets Phares</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Projet Web 1 -->
+                        <div class="bg-cream rounded-3xl p-8 border border-stoneCustom/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-2">Prothésiste Ongulaire</span>
+                            <h4 class="font-serif text-xl text-charcoal mb-3">L'Écrin d'ongles — Paris</h4>
+                            <p class="text-sm text-warmGray font-light mb-6">Refonte complète de l'identité digitale, mise en valeur des poses artistiques et tunnel de prise de contact direct.</p>
+                            <div class="bg-stoneCustom/20 rounded-2xl h-48 flex items-center justify-center text-xs text-warmGray font-serif italic border border-stoneCustom/40">
+                                [ Aperçu mockup site web prothésiste ongulaire ]
+                            </div>
+                        </div>
+                        <!-- Projet Web 2 -->
+                        <div class="bg-cream rounded-3xl p-8 border border-stoneCustom/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-2">Institut de Beauté</span>
+                            <h4 class="font-serif text-xl text-charcoal mb-3">Maison Aura — Lyon</h4>
+                            <p class="text-sm text-warmGray font-light mb-6">Structure des soins holistiques, présentation claire des rituels visage et intégration d'un espace de réservation fluide.</p>
+                            <div class="bg-stoneCustom/20 rounded-2xl h-48 flex items-center justify-center text-xs text-warmGray font-serif italic border border-stoneCustom/40">
+                                [ Aperçu mockup site institut de beauté ]
+                            </div>
+                        </div>
+                        <!-- Projet Web 3 -->
+                        <div class="bg-cream rounded-3xl p-8 border border-stoneCustom/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-2">Technicienne du Regard</span>
+                            <h4 class="font-serif text-xl text-charcoal mb-3">Lash Studio — Bordeaux</h4>
+                            <p class="text-sm text-warmGray font-light mb-6">Mise en avant visuelle des extensions de cils, réassurance client et clarification des protocoles d'entretien.</p>
+                            <div class="bg-stoneCustom/20 rounded-2xl h-48 flex items-center justify-center text-xs text-warmGray font-serif italic border border-stoneCustom/40">
+                                [ Aperçu mockup site technicienne de cils ]
+                            </div>
+                        </div>
+                        <!-- Projet Web 4 -->
+                        <div class="bg-cream rounded-3xl p-8 border border-stoneCustom/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-2">Coiffeuse à Domicile</span>
+                            <h4 class="font-serif text-xl text-charcoal mb-3">Studio Nomade — Nantes</h4>
+                            <p class="text-sm text-warmGray font-light mb-6">Présentation des zones d'intervention, galerie avant/après texturée et prise de rendez-vous simplifiée par message.</p>
+                            <div class="bg-stoneCustom/20 rounded-2xl h-48 flex items-center justify-center text-xs text-warmGray font-serif italic border border-stoneCustom/40">
+                                [ Aperçu mockup site coiffeuse à domicile ]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-8">
+                    <h3 class="font-serif text-2xl font-normal text-charcoal mb-8 pb-4 border-b border-stoneCustom/40 flex items-center justify-between">
+                        <span>Design Graphique & Identités</span>
+                        <span class="text-xs uppercase tracking-widest text-warmGray font-sans">4 Projets Phares</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Projet Graphique 1 -->
+                        <div class="bg-cream rounded-3xl p-6 border border-stoneCustom/60">
+                            <span class="text-xs text-terracotta block mb-2 font-semibold">Papeterie</span>
+                            <h4 class="font-serif text-lg text-charcoal mb-2">Cartes de visite texturées</h4>
+                            <p class="text-xs text-warmGray font-light">Grammage lourd, finitions mates et dorure subtile pour un institut haut de gamme.</p>
+                        </div>
+                        <!-- Projet Graphique 2 -->
+                        <div class="bg-cream rounded-3xl p-6 border border-stoneCustom/60">
+                            <span class="text-xs text-terracotta block mb-2 font-semibold">Identité Visuelle</span>
+                            <h4 class="font-serif text-lg text-charcoal mb-2">Refonte de Logo & Palette</h4>
+                            <p class="text-xs text-warmGray font-light">Création d'un univers visuel apaisant et intemporel pour une experte en bien-être.</p>
+                        </div>
+                        <!-- Projet Graphique 3 -->
+                        <div class="bg-cream rounded-3xl p-6 border border-stoneCustom/60">
+                            <span class="text-xs text-terracotta block mb-2 font-semibold">Supports Promotionnels</span>
+                            <h4 class="font-serif text-lg text-charcoal mb-2">Flyers & Tarifs Rituels</h4>
+                            <p class="text-xs text-warmGray font-light">Mise en page épurée et lisible pour présenter les forfaits de saison en salon.</p>
+                        </div>
+                        <!-- Projet Graphique 4 -->
+                        <div class="bg-cream rounded-3xl p-6 border border-stoneCustom/60">
+                            <span class="text-xs text-terracotta block mb-2 font-semibold">Réseaux Sociaux</span>
+                            <h4 class="font-serif text-lg text-charcoal mb-2">Templates Instagram</h4>
+                            <p class="text-xs text-warmGray font-light">Harmonisation complète du feed avec des visuels axés sur les bénéfices client.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 07 — MA FAÇON DE TRAVAILLER -->
+    <section id="methode" class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">06 / Processus</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-16">
+                Simple, direct et naturel.
+            </h2>
+
+            <div class="space-y-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-stoneCustom/40 gap-4">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-serif text-3xl text-terracotta font-light">01</span>
+                        <div>
+                            <h3 class="text-charcoal font-medium text-lg">On échange</h3>
+                            <p class="text-sm text-warmGray font-light">Vous me parlez de votre activité, de vos envies et de ce qui coince aujourd'hui.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-stoneCustom/40 gap-4">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-serif text-3xl text-terracotta font-light">02</span>
+                        <div>
+                            <h3 class="text-charcoal font-medium text-lg">On imagine</h3>
+                            <p class="text-sm text-warmGray font-light">Nous posons ensemble les bases de la direction visuelle et de l'expérience idéale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-stoneCustom/40 gap-4">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-serif text-3xl text-terracotta font-light">03</span>
+                        <div>
+                            <h3 class="text-charcoal font-medium text-lg">Je conçois</h3>
+                            <p class="text-sm text-warmGray font-light">Je donne vie à votre espace digital et à vos visuels avec minutie et exigence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-stoneCustom/40 gap-4">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-serif text-3xl text-terracotta font-light">04</span>
+                        <div>
+                            <h3 class="text-charcoal font-medium text-lg">On affine</h3>
+                            <p class="text-sm text-warmGray font-light">Vos retours me permettent d'ajuster chaque détail pour que le résultat vous ressemble à 100%.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-serif text-3xl text-terracotta font-light">05</span>
+                        <div>
+                            <h3 class="text-charcoal font-medium text-lg">On lance</h3>
+                            <p class="text-sm text-warmGray font-light">Votre projet prend vie et devient votre meilleur allié au quotidien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 08 — L'APPROCHE PARTENAIRE -->
+    <section class="py-24 md:py-32 px-6 bg-charcoal text-cream">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">07 / Ma Philosophie</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal mb-8 leading-tight">
+                Je ne suis pas une agence impersonnelle.
+            </h2>
+            <p class="text-base md:text-lg text-cream/80 font-light max-w-2xl mx-auto leading-relaxed">
+                Je crois profondément que les plus beaux projets naissent d'une vraie conversation. Je ne cherche pas à vous vendre un package standardisé puis à disparaître. Je préfère comprendre votre métier, vos exigences et avancer main dans la main, en toute simplicité.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 09 — TARIFS -->
+    <section id="tarifs" class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">08 / Investissement</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-16">
+                Des investissements pensés pour les indépendantes.
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tarifs Web -->
+                <div class="bg-sand/30 p-10 rounded-3xl border border-stoneCustom/60 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-warmGray font-semibold block mb-4">Site Web</span>
+                        <div class="font-serif text-4xl text-charcoal mb-6">À partir de 600 €</div>
+                        <p class="text-sm text-warmGray font-light leading-relaxed mb-8">
+                            Projet entièrement personnalisé selon vos besoins, vos fonctionnalités et l'envergure de votre activité.
+                        </p>
+                    </div>
+                    <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20connaître%20les%20détails%20pour%20la%20création%20de%20mon%20site%20web](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20connaître%20les%20détails%20pour%20la%20création%20de%20mon%20site%20web)..." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center py-3.5 rounded-full bg-charcoal text-cream text-xs uppercase tracking-widest font-medium hover:bg-terracotta transition-colors">
+                        Discuter de mon site
+                    </a>
+                </div>
+
+                <!-- Tarifs Graphisme -->
+                <div class="bg-sand/30 p-10 rounded-3xl border border-stoneCustom/60 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-warmGray font-semibold block mb-4">Design Graphique</span>
+                        <div class="font-serif text-4xl text-charcoal mb-6">À partir de 60 €</div>
+                        <p class="text-sm text-warmGray font-light leading-relaxed mb-8">
+                            Selon la nature du support, la complexité et les éléments graphiques spécifiques à concevoir.
+                        </p>
+                    </div>
+                    <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20discuter%20de%20mes%20besoins%20en%20design%20graphique](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20discuter%20de%20mes%20besoins%20en%20design%20graphique)..." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center py-3.5 rounded-full bg-charcoal text-cream text-xs uppercase tracking-widest font-medium hover:bg-terracotta transition-colors">
+                        Discuter de mes visuels
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10 — FAQ -->
+    <section class="py-24 md:py-32 px-6 bg-sand/30 border-t border-stoneCustom/30">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">09 / Questions Fréquentes</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-16">
+                Tout ce que vous aimeriez savoir avant de commencer.
+            </h2>
+
+            <div class="space-y-6">
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Combien coûte un site web ?</h3>
+                    <p class="text-warmGray font-light text-sm">À partir de 600 €, modulable selon vos besoins exacts et les fonctionnalités attendues.</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Combien de temps faut-il pour le créer ?</h3>
+                    <p class="text-warmGray font-light text-sm">Le timing s'adapte à notre rythme d'échange, généralement quelques semaines de la conception au lancement.</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Est-ce que le site sera parfaitement adapté aux téléphones ?</h3>
+                    <p class="text-warmGray font-light text-sm">Oui, la conception est entièrement pensée mobile-first pour garantir une fluidité parfaite sur smartphone.</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Puis-je présenter mes tarifs et mes prestations clairement ?</h3>
+                    <p class="text-warmGray font-light text-sm">C'est l'objectif premier : structurer vos offres pour que vos clientes comprennent immédiatement vos prix et vos soins.</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Puis-je intégrer un système de réservation ?</h3>
+                    <p class="text-warmGray font-light text-sm">Absolument, nous pouvons connecter vos outils existants (Planity, WhatsApp, liens de réservation externes).</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Est-ce que je dois déjà avoir mon logo ?</h3>
+                    <p class="text-warmGray font-light text-sm">Non, nous pouvons le créer ou le structurer ensemble dans le cadre de l'offre design graphique.</p>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl border border-stoneCustom/50">
+                    <h3 class="text-charcoal font-medium text-lg mb-2">Comment commencer ?</h3>
+                    <p class="text-warmGray font-light text-sm">Un simple message sur WhatsApp pour en discuter, sans engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11 — À PROPOS D'AMADEUS -->
+    <section class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold block mb-4">10 / L'Humain Derrière L'Écran</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-8">
+                Derrière chaque écran, il y a un humain.
+            </h2>
+            <p class="text-warmGray font-light text-base md:text-lg leading-relaxed">
+                Je m'appelle Amadeus. Depuis deux ans, j'accompagne des professionnelles de la beauté et du bien-être. Ce qui m'anime au quotidien, c'est de voir la lueur dans les yeux de quelqu'un qui réalise enfin que son image en ligne traduit sa véritable valeur. Pas de jargon, pas de promesses magiques : juste du design juste, du code propre et une collaboration humaine.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 12 — CTA FINAL -->
+    <section class="py-24 md:py-32 px-6 bg-sand/50 border-t border-stoneCustom/40 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-5xl font-normal text-charcoal mb-4">
+                Vous avez déjà l'expertise et la passion.
+            </h2>
+            <p class="font-serif italic text-2xl text-terracotta mb-10">
+                Il ne reste plus qu'à lui donner l'espace digital qu'elle mérite.
+            </p>
+
+            <div class="space-y-4">
+                <a href="[https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet](https://wa.me/2290146893637?text=Bonjour%20Amadeus,%20j'aimerais%20qu'on%20discute%20de%20mon%20activité%20et%20de%20mon%20projet)..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-terracotta text-cream text-sm tracking-wide font-medium hover:bg-terracottaHover transition-all duration-300 shadow-md">
+                    Parler de mon projet sur WhatsApp
+                </a>
+                <p class="text-xs uppercase tracking-widest text-warmGray block pt-2">
+                    Aucun engagement. On commence simplement par en parler.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-12 px-6 bg-charcoal text-cream border-t border-cream/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs text-cream/60 space-y-4 md:space-y-0">
+        <div>
+            © 2026 Amadeus Avleka. Tous droits réservés.
+        </div>
+        <div class="flex space-x-6">
+            <span>Développeur Web & Graphiste</span>
+            <span>•</span>
+            <span>Spécialiste Beauté & Bien-être</span>
+        </div>
+    </div>
+</footer>
+
+<!-- Initialisation Lucide Icons -->
+<script>
+    lucide.createIcons();
+</script>
